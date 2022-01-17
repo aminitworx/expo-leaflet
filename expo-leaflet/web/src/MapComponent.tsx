@@ -90,6 +90,7 @@ const center = (map?: LeafletMap | null): LatLngLiteral => {
 export const MapComponent = (props: ExpoLeafletProps) => {
   const {
     mapCenterPosition,
+    setBaseMap,
     mapLayers = [],
     mapMarkers = [],
     mapShapes = [],
@@ -138,6 +139,7 @@ export const MapComponent = (props: ExpoLeafletProps) => {
               {...props.mapOptions}
               whenCreated={(map: LeafletMap) => {
                 setMapRef(map)
+                setBaseMap(map)
                 map.addEventListener({
                   click: (event: LeafletMouseEvent) => {
                     const { latlng } = event
