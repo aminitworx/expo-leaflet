@@ -17,4 +17,6 @@ export type ExpoLeafletProps = LeafletMapProps & {
   loadingIndicator?: () => ReactElement
   onMapLoad?: () => void
   onMessage: (message: LeafletWebViewEvent) => void
+  setBaseMap : any
+
 }
