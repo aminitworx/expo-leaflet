@@ -175,17 +175,17 @@ export const MapComponent = (props: ExpoLeafletProps) => {
                   resize: () => {
                     onMessage({
                       tag: 'onResize',
-                      bounds: bounds(mapRef),
-                      mapCenter: center(mapRef),
-                      zoom: mapRef?.getZoom()!,
+                      bounds: bounds(map),
+                      mapCenter: center(map),
+                      zoom: map?.getZoom()!,
                     })
                   },
                   unload: () => {
                     onMessage({
                       tag: 'onUnload',
-                      bounds: bounds(mapRef),
-                      mapCenter: center(mapRef),
-                      zoom: mapRef?.getZoom()!,
+                      bounds: bounds(map),
+                      mapCenter: center(map),
+                      zoom: map?.getZoom()!,
                     })
                   },
                   zoom: () => {
@@ -193,7 +193,7 @@ export const MapComponent = (props: ExpoLeafletProps) => {
                       tag: 'onZoom',
                       bounds: bounds(map),
                       mapCenter: center(map),
-                      zoom: mapRef?.getZoom()!,
+                      zoom: map?.getZoom()!,
                     })
                   },
                   zoomend: () => {
@@ -201,15 +201,15 @@ export const MapComponent = (props: ExpoLeafletProps) => {
                       tag: 'onZoomEnd',
                       bounds: bounds(map),
                       mapCenter: center(map),
-                      zoom: mapRef?.getZoom()!,
+                      zoom: map?.getZoom()!,
                     })
                   },
                   zoomlevelschange: () => {
                     onMessage({
                       tag: 'onZoomLevelsChange',
-                      bounds: bounds(mapRef),
-                      mapCenter: center(mapRef),
-                      zoom: mapRef?.getZoom()!,
+                      bounds: bounds(map),
+                      mapCenter: center(map),
+                      zoom: map?.getZoom()!,
                     })
                   },
                   zoomstart: () => {
@@ -217,7 +217,7 @@ export const MapComponent = (props: ExpoLeafletProps) => {
                       tag: 'onZoomStart',
                       bounds: bounds(map),
                       mapCenter: center(map),
-                      zoom: mapRef?.getZoom()!,
+                      zoom: map?.getZoom()!,
                     })
                   },
                 })
