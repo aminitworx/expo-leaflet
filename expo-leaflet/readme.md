@@ -1,6 +1,6 @@
 # expo-leaflet
 
-A [Leaflet](https://leafletjs.com) map component with no native code
+A [Leaflet](https://leafletjs.com) map component with no native code, Extended from expo-leaflet with improvements and bug fixes
 
 ## Installation
 
